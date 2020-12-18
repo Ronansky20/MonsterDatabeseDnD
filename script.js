@@ -3,7 +3,7 @@
 
     // Initiate request.
     oXHR.onreadystatechange = reportStatus;
-    oXHR.open("GET", "../../library/sample.json", true);  // get json file.
+    oXHR.open("GET", "data.json", true);  // get json file.
     oXHR.send();
 
     function reportStatus() {
@@ -16,12 +16,12 @@
 
     // Create an HTML table using the JSON data.
     function createTableFromJSON(jsonData) {
-        var arrBirds = [];
-        arrBirds = JSON.parse(jsonData); 	// Convert JSON to array.
+        var name = [];
+        name = JSON.parse(jsonData); 	// Convert JSON to array.
 
         var col = [];
-        for (var i = 0; i < arrBirds.length; i++) {
-            for (var key in arrBirds[i]) {
+        for (var i = 0; i < name.length; i++) {
+            for (var key in name[i]) {
                 if (col.indexOf(key) === -1) {
                     col.push(key);
                 }
@@ -29,24 +29,31 @@
         }
 
         // Create a dynamic table.
-        var table = document.createElement;// Create table header.
+        var table = document.createElement("table");
+
+        // Create table header.
 
         var tr = table.insertRow(-1);                   // Table row.
 
         for (var i = 0; i < col.length; i++) {
+            // var dis document.createelement("div")
+            // dis.class (" description")
+            //dis.innerhtml = jsonQuerie.result[' name' ]
+            //var doel = document.getElementById(" #main")
+            //doel.appendchild(dis)
             var th = document.createElement("th");      // Table header.
             th.innerHTML = col[i];
             tr.appendChild(th);
         }
 
         // Add JSON to the table rows.
-        for (var i = 0; i < arrBirds.length; i++) {
+        for (var i = 0; i < name.length; i++) {
 
             tr = table.insertRow(-1);
 
             for (var j = 0; j < col.length; j++) {
                 var tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = arrBirds[i][col[j]];
+                tabCell.innerHTML = name[i][col[j]];
             }
         }
 
@@ -54,4 +61,4 @@
         var divContainer = document.getElementById("showTable");
         divContainer.innerHTML = "";
         divContainer.appendChild(table);
-    }
+    };

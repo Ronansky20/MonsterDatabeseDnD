@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  font: 17px 'Segoe UI';
+}
+
+table, th, td {
+  border: solid 1px #ddd;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr {
+  height: 100px;
+}
+#showTable{
+    height: 100vh;
+    overflow: scroll;
+}
+#showTable p{
+    overflow: hidden;
+
+}
+/*# sourceMappingURL=style.css.map */
