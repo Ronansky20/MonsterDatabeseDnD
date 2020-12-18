@@ -37,10 +37,10 @@
 
         for (var i = 0; i < col.length; i++) {
             var dis;
-            document.createelement("div");
+            document.createElement("div");
             dis.class(" description");
-            dis.innerhtml = jsonQuerie.result[' name'];
-            var doel = document.getElementById(" #main");
+            dis.innerhtml = jsonQuerie.result['.name'];
+            var doel = document.getElementById("#main");
             doel.appendChild(dis);
         }
 
@@ -59,4 +59,5 @@
         var divContainer = document.getElementById("showTable");
         divContainer.innerHTML = "";
         divContainer.appendChild(table);
-    };
+};
+    
