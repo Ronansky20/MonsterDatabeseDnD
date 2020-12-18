@@ -36,14 +36,12 @@
         var tr = table.insertRow(-1);                   // Table row.
 
         for (var i = 0; i < col.length; i++) {
-            // var dis document.createelement("div")
-            // dis.class (" description")
-            //dis.innerhtml = jsonQuerie.result[' name' ]
-            //var doel = document.getElementById(" #main")
-            //doel.appendchild(dis)
-            var th = document.createElement("th");      // Table header.
-            th.innerHTML = col[i];
-            tr.appendChild(th);
+            var dis;
+            document.createelement("div");
+            dis.class(" description");
+            dis.innerhtml = jsonQuerie.result[' name'];
+            var doel = document.getElementById(" #main");
+            doel.appendChild(dis);
         }
 
         // Add JSON to the table rows.
