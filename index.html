@@ -9,16 +9,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- Bootstrap Table CSS-->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css">
-    
-
-
-
     <title>DnD Monster Generator</title>
   </head>
   <body>
-    <h1>Ronan Drost </h1>
-
-    <table id="table"></table>
+    <div class="container"> 
+    <h1 class="text text-success text-center "> 
+      GeeksforGeeks 
+    </h1> 
+    <h6 class="text text-success text-center"> 
+      A computer science portal for geeks 
+    </h6> 
+      <table class="table-striped border-success"> 
+        <thead> 
+          <tr> 
+            <th data-field="id"> 
+              <span class="text-success"> 
+                Employee ID 
+              </span> 
+            </th> 
+            <th data-field="name"> 
+              <span class="text-success"> 
+                Employee Name  
+              </span> 
+            </th> 
+            <th data-field="date"> 
+              <span class="text-success"> 
+                Joining Date  
+              </span> 
+            </th> 
+          </tr> 
+        </thead> 
+      </table> 
+  </div>  
 
 
 
@@ -30,7 +52,45 @@
     <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/locale/bootstrap-table-zh-CN.min.js"></script>
     <!--Jquery JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script type="text/javascript" src="./data/data.json"></script>
+  <script type="text/javascript"> 
+    $(document).ready(function () { 
+  
+      // Use the given data to create  
+      // the table and display it 
+      $('table').bootstrapTable({ 
+        data: mydata 
+      }); 
+    }); 
+  
+    // Specify the JSON data to be displayed 
+    var mydata = 
+      [ 
+        { 
+          "id": "24323", 
+          "name": "Mark Smith", 
+          "date": "25/5/2020" 
+        }, 
+        { 
+          "id": "24564", 
+          "name": "Caitlin MacDonald", 
+          "date": "17/5/2020" 
+        }, 
+        { 
+          "id": "24345", 
+          "name": "Jessie Johnson ", 
+          "date": "1/5/2020" 
+        }, 
+        { 
+          "id": "24874", 
+          "name": "Alen Williams", 
+          "date": "14/5/2020" 
+        }, 
+        { 
+          "id": "24323", 
+          "name": "Maria Garcia ", 
+          "date": "13/5/2020" 
+        } 
+      ]; 
+  </script> 
     </body>
 </html>
